@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "basic-panic"
+version = "0.1.0"
+description = "A basic panic model"
+authors = ["Hendrik Boeck <hendrikboeck.dev@protonmail.com>"]
+packages = [{ include = "*", from = "src" }]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.dev-dependencies]
+yapf = "^0.31.0"
+toml = "^0.10.2"
+pylint = "^3.1.0"
+pytype = "^2024.4.11"
+pytest = "^8.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytype]
+inputs = ["src/basic_panic"]
+disable = []
+
+[tool.pylint.'MESSAGES CONTROL']
+fail-under = 9.0
+disable = "C,R,W1401"
+
+[tool.yapf]
+based_on_style = "google"
+column_limit = 100
+indent_width = 4
+dedent_closing_brackets = true
+coalesce_brackets = true
+blank_line_before_nested_class_or_def = true
+indent_dictionary_value = true
+spaces_around_default_or_named_assign = true
+spaces_before_comment = 3
+split_all_top_level_comma_separated_values = false
+split_before_dict_set_generator = true
+split_before_dot = true
+split_complex_comprehension = true
