@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "basic-panic"
-version = "0.1.0"
+version = "0.1.1"
 description = "A basic panic model"
 authors = ["Hendrik Boeck <hendrikboeck.dev@protonmail.com>"]
 packages = [{ include = "*", from = "src" }]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 
 [tool.poetry.dev-dependencies]
 yapf = "^0.31.0"
